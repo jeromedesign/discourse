@@ -258,14 +258,8 @@ html {
     background-position: center;
     width: 100vw;
     height: 100vh;
-    z-index: -1
   }
 }
-
-  body.no-ember .background-container {
-    display: none;
-  }
-
 
 html body #main-outlet {
   margin-top: 30px;
