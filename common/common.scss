@@ -567,11 +567,3 @@ html body #main-outlet {
   background-size: cover;
   background-attachment: fixed;
 }
-
-/* Rendre transparents les blocs qui masquent l’image */
-#main-outlet-wrapper.wrap,
-#main-outlet,
-a.powered-by-discourse,
-span.powered-by-discourse__content {
-  background: transparent !important;
-}
