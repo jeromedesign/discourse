@@ -258,6 +258,7 @@ html {
     background-position: center;
     width: 100vw;
     height: 100vh;
+    z-index: 1;
   }
 }
 
@@ -536,7 +537,7 @@ html body #main-outlet {
     height: 100%;
     display: block;
     position: fixed;
-    z-index: 0;
+    z-index: -1;
   }
 }
 
