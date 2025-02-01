@@ -568,9 +568,7 @@ body::before {
   background-attachment: fixed;
 }
 
-/* On rend transparents les éléments potentiellement opaques */
-#main-outlet-wrapper.wrap,
-#main-outlet,
+/* On NE rend transparent que le bas de page "Powered by Discourse" */
 a.powered-by-discourse,
 span.powered-by-discourse__content {
   background: transparent !important;
