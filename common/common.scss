@@ -251,8 +251,8 @@ div.ac-wrap {
 }
 
 html {
-  /* Supprime/force l'ancien background du body */
   body:not(.no-ember) {
+    /* On retire tout background existant */
     background: none !important;
     width: 100vw;
     height: 100vh;
@@ -550,19 +550,28 @@ html body #main-outlet {
 }
 
 /* --------------------------------------------------------------------------------
-   AJOUT DU CALQUE D'ARRIÈRE-PLAN FIXE & TRANSPARENCE
+   CREER LE CALQUE DE FOND VIA PSEUDO-ELEMENT
    -------------------------------------------------------------------------------- */
 
-/* Calque fixe : insérez un <div class="background-layer"></div> dans le code HTML
-   (par ex. dans l’onglet "header" du thème) */
-.background-layer {
+/* On utilise body::before à la place d'un div .background-layer */
+body::before {
+  content: "";
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
+  z-index: -1;
   background: url("https://raw.githubusercontent.com/jeromedesign/image/e8fa70e6842b4fafb0bb06a513ab3ccb5d69fe87/gradient%20discourse.png")
     no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
+}
+
+/* On rend transparents les éléments potentiellement opaques */
+#main-outlet-wrapper.wrap,
+#main-outlet,
+a.powered-by-discourse,
+span.powered-by-discourse__content {
+  background: transparent !important;
 }
