@@ -561,7 +561,6 @@ html body #main-outlet {
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 1; /* Derrière le reste du contenu */
   background: url("https://raw.githubusercontent.com/jeromedesign/image/e8fa70e6842b4fafb0bb06a513ab3ccb5d69fe87/gradient%20discourse.png")
     no-repeat center center;
   background-size: cover;
