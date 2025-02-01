@@ -550,3 +550,27 @@ html body #main-outlet {
 .title-voting {
   padding-left: 14px;
 }
+
+/* --------------------------------------------------------------------------------
+   AJOUT D’UN CALQUE D’ARRIÈRE-PLAN FIXE POUR QUE L’IMAGE RESTE VISIBLE AU SCROLL
+   -------------------------------------------------------------------------------- */
+
+.background-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1; /* Derrière tout le contenu Discourse */
+  background: url("https://raw.githubusercontent.com/jeromedesign/image/e8fa70e6842b4fafb0bb06a513ab3ccb5d69fe87/gradient%20discourse.png")
+    no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Rendre transparents les blocs qui masquent l’image de fond */
+#main-outlet-wrapper.wrap,
+#main-outlet,
+a.powered-by-discourse,
+span.powered-by-discourse__content {
+  background: transparent !important;
+}
