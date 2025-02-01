@@ -251,11 +251,9 @@ div.ac-wrap {
 }
 
 html {
+  /* Supprime/force l'ancien background du body */
   body:not(.no-ember) {
-    background: url("https://raw.githubusercontent.com/jeromedesign/image/e8fa70e6842b4fafb0bb06a513ab3ccb5d69fe87/gradient%20discourse.png") no-repeat center center fixed;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
+    background: none !important;
     width: 100vw;
     height: 100vh;
     z-index: 1;
@@ -552,22 +550,25 @@ html body #main-outlet {
 }
 
 /* --------------------------------------------------------------------------------
-   AJOUT D’UN CALQUE D’ARRIÈRE-PLAN FIXE POUR QUE L’IMAGE RESTE VISIBLE AU SCROLL
+   AJOUT DU CALQUE D'ARRIÈRE-PLAN FIXE & TRANSPARENCE
    -------------------------------------------------------------------------------- */
 
+/* Calque fixe : insérez un <div class="background-layer"></div> dans le code HTML
+   (par ex. dans l’onglet "header" du thème) */
 .background-layer {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: -1; /* Derrière tout le contenu Discourse */
+  z-index: -1; /* Derrière le reste du contenu */
   background: url("https://raw.githubusercontent.com/jeromedesign/image/e8fa70e6842b4fafb0bb06a513ab3ccb5d69fe87/gradient%20discourse.png")
-    no-repeat center center fixed;
+    no-repeat center center;
   background-size: cover;
+  background-attachment: fixed;
 }
 
-/* Rendre transparents les blocs qui masquent l’image de fond */
+/* Rendre transparents les blocs qui masquent l’image */
 #main-outlet-wrapper.wrap,
 #main-outlet,
 a.powered-by-discourse,
