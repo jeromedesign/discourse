@@ -91,6 +91,9 @@
 .badge-wrapper.box {
   border-radius: 0.25em;
   overflow: hidden;
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .badge-wrapper.bullet {
