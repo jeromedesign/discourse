@@ -91,9 +91,6 @@
 .badge-wrapper.box {
   border-radius: 0.25em;
   overflow: hidden;
-  background-size: cover; 
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 .badge-wrapper.bullet {
@@ -565,7 +562,7 @@ body::before {
   width: 100vw;
   height: 100vh;
   z-index: -1;
-  background: url("https://raw.githubusercontent.com/jeromedesign/gradient/refs/heads/main/gradient%20new%20copie3.png")
+  background: url("https://raw.githubusercontent.com/jeromedesign/gradient/refs/heads/main/background%20discoursv3.png")
     no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
